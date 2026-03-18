@@ -111,5 +111,5 @@ rows = parse_match(match_json)
 print(f"Parsed {len(rows)} ball events")
 print(rows[0])
 
-with open("parsed_test_data.json", "w") as f:
+with open("../data/processed/parsed_test_data.json", "w") as f:
     json.dump(rows, f, indent=2)
