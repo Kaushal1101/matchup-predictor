@@ -1,0 +1,31 @@
+==============================
+MODEL EVALUATION
+==============================
+Accuracy: 0.45802212760016753
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.50      0.61      0.55     95100
+           1       0.45      0.52      0.48     87877
+           2       0.11      0.03      0.05     16858
+           3       0.01      0.00      0.00      1305
+           4       0.07      0.02      0.03     20781
+           5       0.00      0.00      0.00       532
+           6       0.05      0.01      0.01      6722
+           7       0.00      0.00      0.00        41
+
+    accuracy                           0.46    229216
+   macro avg       0.15      0.15      0.14    229216
+weighted avg       0.40      0.46      0.42    229216
+
+
+Notes
+
+Although the accuracy for our model is decent, it hides the fact that this model is not really trying to predict
+what happens on a ball based on given data. It's simply using the probability distribution which is right-skewed, 
+since there are lots of 0s and 1s. It rarely predicts anything greater than a double.
+
+To improve on this model, I'll look into fixing class imbalances (punishing the model for wrong 4s and 6s guesses)
+and look into adding more features.
+

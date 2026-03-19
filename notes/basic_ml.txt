@@ -1,0 +1,5 @@
+We're using random forests instead of decision trees, since it allows us to avoid overfitting.
+This is possible since a forest is simply multiple tress, allowing them to make different errors, and voting will effectively cancel them out.
+
+One-hot encoding is converting categorical data into binary format.
+
