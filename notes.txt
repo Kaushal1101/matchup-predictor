@@ -1,0 +1,60 @@
+Fields
+A) Batsman
+1. Career Average
+2. Career Strike rate
+3. Handedness (R/L)
+4. Match score
+5. Match strike rate
+6. Match balls faced
+7. Partnership score difference (batsman score - non-striker score) [NOT IN MVP]
+8. Partnership strike rate difference (batsman SR - non-striker SR) [NOT IN MVP]
+9. Career Average vs Country [NOT IN MVP]
+10. Career Strike Rate vs Country [NOT IN MVP]
+
+B) Bowler
+1. Career Bowling Average
+2. Career Bowling Strike Rate 
+4. Handedness
+5. Bowling style
+6. Match Wickets 
+7. Match Runs Conceded
+8. Match Overs Bowled
+9. Career Bowling Average vs Country [NOT IN MVP]
+10. Career Bowling Strike Rate vs Country [NOT IN MVP]
+
+C) Match
+1. isChase
+2. Target (if chasing) [NOT IN MVP]
+3. First innings runs scored (if chasing) [NOT IN MVP]
+4. Runs remaining (if chasing)
+5. Required run rate (if chasing)
+6. Balls Bowled (can divide by 120)
+7. Runs scored
+8. Run rate
+9. Wickets fallen
+10. Venue (Ground) [NOT IN MVP]
+11. Venue (Country)
+12. isBattingHome (if batting side is playing at home country) [NOT IN MVP]
+13. isBowlingHome (same as isBattingHome but for bowling) [NOT IN MVP]
+14. isNeutral (if neither team home game) [NOT IN MVP]
+15. Year
+
+
+
+Input
+1. Batsman Name
+2. Bowler Name
+3. Non-Striker Name
+4. Innings (1 or 2)
+5. First innings total (if second innings)
+6. Balls Bowled
+7. Batsman score
+8. Batsman balls faced
+9. Non-striker score
+10. Non-striker balls faced
+11. Bowler balls Bowled
+12. Bowler wickets taken
+13. Bowler runs Conceded
+14. Wickets fallen
+15. Country
+16. Year

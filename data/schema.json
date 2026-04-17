@@ -1,0 +1,190 @@
+{
+  "dataset": "all_matches_dataset",
+  "path": "data/processed/all_matches_dataset.csv",
+  "format": "csv",
+  "generated_at": "2026-04-17",
+  "row_count": 1146080,
+  "file_size_bytes": 224657850,
+  "nullability": "no_missing_values_detected",
+  "phases": ["powerplay", "middle", "death"],
+  "fields": [
+    {
+      "name": "match_date",
+      "type": "string",
+      "format_hint": "DD/MM/YYYY",
+      "pattern": "^\\d{2}/\\d{2}/\\d{4}$",
+      "description": "Match date as day/month/year."
+    },
+    {
+      "name": "batting_team",
+      "type": "string",
+      "description": "Batting team name."
+    },
+    {
+      "name": "bowling_team",
+      "type": "string",
+      "description": "Bowling team name."
+    },
+    {
+      "name": "over",
+      "type": "integer",
+      "min": 0,
+      "max": 19,
+      "description": "Over number (T20-style 0-19)."
+    },
+    {
+      "name": "ball",
+      "type": "integer",
+      "min": 1,
+      "max": 19,
+      "description": "Ball number within over; can exceed 6 due to extra deliveries."
+    },
+    {
+      "name": "phase",
+      "type": "string",
+      "enum": ["powerplay", "middle", "death"],
+      "description": "Innings phase label."
+    },
+    {
+      "name": "batter",
+      "type": "string",
+      "description": "Striker batter name."
+    },
+    {
+      "name": "bowler",
+      "type": "string",
+      "description": "Bowler name."
+    },
+    {
+      "name": "nonstriker",
+      "type": "string",
+      "description": "Non-striker batter name."
+    },
+    {
+      "name": "batter_runs",
+      "type": "integer",
+      "min": 0,
+      "max": 172,
+      "description": "Batter runs (appears cumulative within innings)."
+    },
+    {
+      "name": "batter_balls",
+      "type": "integer",
+      "min": 0,
+      "max": 101,
+      "description": "Batter balls faced (appears cumulative within innings)."
+    },
+    {
+      "name": "batter_strike_rate",
+      "type": "number",
+      "description": "Striker strike rate (numeric)."
+    },
+    {
+      "name": "nonstriker_strike_rate",
+      "type": "number",
+      "description": "Non-striker strike rate (numeric)."
+    },
+    {
+      "name": "bowler_runs_conceded",
+      "type": "integer",
+      "min": 0,
+      "max": 87,
+      "description": "Bowler runs conceded (appears cumulative within innings)."
+    },
+    {
+      "name": "bowler_wickets",
+      "type": "integer",
+      "min": 0,
+      "max": 8,
+      "description": "Bowler wickets (appears cumulative within innings)."
+    },
+    {
+      "name": "bowler_economy",
+      "type": "number",
+      "description": "Bowler economy rate (numeric)."
+    },
+    {
+      "name": "career_strike_rate",
+      "type": "number",
+      "description": "Career batting strike rate for the batter (numeric)."
+    },
+    {
+      "name": "career_bowler_economy",
+      "type": "number",
+      "description": "Career bowling economy for the bowler (numeric)."
+    },
+    {
+      "name": "team_runs",
+      "type": "integer",
+      "min": 0,
+      "max": 338,
+      "description": "Team runs (appears cumulative within innings)."
+    },
+    {
+      "name": "team_wickets",
+      "type": "integer",
+      "min": 0,
+      "max": 10,
+      "description": "Team wickets (appears cumulative within innings)."
+    },
+    {
+      "name": "net_run_rate",
+      "type": "number",
+      "min": 0,
+      "max": 42,
+      "description": "Net run rate (numeric)."
+    },
+    {
+      "name": "required_run_rate",
+      "type": "number",
+      "min": 0,
+      "max": 1662,
+      "description": "Required run rate (numeric; can spike late innings when few balls remain)."
+    },
+    {
+      "name": "is_chasing",
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "1 if batting team is chasing a target, else 0."
+    },
+    {
+      "name": "target",
+      "type": "integer",
+      "min": 0,
+      "max": 345,
+      "description": "Target score when chasing; 0 when not chasing (in this dataset)."
+    },
+    {
+      "name": "runs_remaining",
+      "type": "integer",
+      "min": 0,
+      "max": 345,
+      "description": "Runs remaining to win (or 0 if not chasing / not applicable)."
+    },
+    {
+      "name": "balls_remaining",
+      "type": "integer",
+      "min": 0,
+      "max": 120,
+      "description": "Balls remaining in innings."
+    },
+    {
+      "name": "runs_scored",
+      "type": "integer",
+      "min": 0,
+      "max": 8,
+      "description": "Runs scored off the delivery (can include extras)."
+    },
+    {
+      "name": "wicket",
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "1 if a wicket fell on the delivery, else 0."
+    }
+  ],
+  "notes": [
+    "Types and ranges were inferred from reading the CSV with pandas and scanning numeric min/max across the file.",
+    "This file is a descriptive schema (not a strict JSON-Schema validator)."
+  ]
+}
+
